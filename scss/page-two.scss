@@ -1,5 +1,102 @@
-@import 'base/fonts';
+@font-face {
+  font-family: "Comic Sans MS";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/Comic-Sans-MS.woff2") format("woff2"),
+}
+
 @import 'base/reset';
 @import 'base/vars';
 
 @import 'global/global';
+
+body {
+  font-family: "Comic Sans MS";
+}
+
+.page-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 70px 0;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -22px;
+    background: url('../images/page-two/image-4.png') no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 558px;
+    height: 588px;
+  }
+  & img {
+    position: absolute;
+  }
+  &__img-one {
+    top: 92px;
+    left: 0;
+  } 
+  &__img-two {
+    top: 478px;
+    left: 30px;
+  }
+  &__img-three {
+    top: 360px;
+    left: 140px;
+  }
+  &__top {
+    text-align: center;
+    position: relative;
+    z-index: 3;
+  }
+  &__title {
+    color: #000;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 63.93px;
+
+    & span {
+      font-size: 69.52px;
+      color: #0075ff;
+      font-family: "Comic Sans MS";
+    }
+  }
+  &__name {
+    color: rgb(60, 255, 103);
+    font-size: 171.3px;
+    // transform: rotate(-20.30deg);
+    position: relative;
+    z-index: 3;
+    -webkit-text-stroke: 2px black;
+    text-stroke: 2px black;
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    z-index: 3;
+  }
+  &__love {
+    border: 8px solid rgb(0, 117, 255);
+    background: rgb(253, 224, 146);
+    color: rgb(255, 23, 23);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35.59px;
+    padding: 6px 16px;
+  }
+
+  &__link {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 12px 41px;
+    font-size: 36.08px;
+    font-weight: 400;
+    min-width: 321px;
+    box-sizing: border-box;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 13px;
+    background: linear-gradient(0.00deg, rgb(255, 255, 255),rgb(208, 208, 208) 21.049%,rgb(255, 255, 255) 100%);
+  }
+}
