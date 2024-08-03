@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/aos.css">
   <link rel="stylesheet" href="assets/css/page-two.css">
   <title>Document</title>
 </head>
@@ -10,19 +11,30 @@
   <div class="wrapper">
     <div class="container">
       <div class="page-two">
-        <img class="page-two__img-one" src="assets/images/page-two/image-1.png" alt="">
-        <img class="page-two__img-two" src="assets/images/page-two/image-10.png" alt="">
-        <img class="page-two__img-three" src="assets/images/page-two/image-2.png" alt="">
+        <img class="page-two__img-one" data-aos="fade-right" src="assets/images/page-two/image-1.png" alt="">
+        <img class="page-two__img-two" data-aos="fade-right" src="assets/images/page-two/image-10.png" alt="">
+        <img class="page-two__img-three" data-aos="fade-left" src="assets/images/page-two/image-2.png" alt="">
         <div class="page-two__top">
-          <h2 class="page-two__title">C ДНЕМ <span>Рождения,</span></h2>
+          <h2 class="page-two__title" data-aos="fade-down">C ДНЕМ <span>Рождения,</span></h2>
         </div>
         <h2 class="page-two__name">Макс</h2>
         <div class="page-two__bottom">
-          <h3 class="page-two__love">Мы тебя любим!!!!</h3>
+          <h3 class="page-two__love" data-aos="fade-up">Мы тебя любим!!!!</h3>
           <a class="page-two__link" href="#">Круто спасибо!</a>
         </div>
       </div>
     </div>
   </div>
+  <script src="assets/js/aos.js"></script>
+  <script>
+    AOS.init(
+     {
+      duration: 900, 
+      offset: 100,
+      easing: 'ease-in-out', 
+      once: true
+     }
+    );
+  </script>
 </body>
 </html>

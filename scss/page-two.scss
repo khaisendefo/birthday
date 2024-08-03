@@ -56,6 +56,8 @@ body {
     color: #000;
     font-family: 'Times New Roman', Times, serif;
     font-size: 63.93px;
+    animation: page-two-text 0.5s linear infinite alternate;
+    animation-delay: 0.9s;
 
     & span {
       font-size: 69.52px;
@@ -63,18 +65,37 @@ body {
       font-family: "Comic Sans MS";
     }
   }
+  @keyframes page-two-text {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
   &__name {
     color: rgb(60, 255, 103);
     font-size: 171.3px;
-    // transform: rotate(-20.30deg);
+    transform: rotate(-6.20deg) translateY(-90px);
     position: relative;
     z-index: 3;
     -webkit-text-stroke: 2px black;
     text-stroke: 2px black;
+    animation: page-two-name 0.5s linear infinite alternate;
+    animation-delay: 0.9s;
+  }
+  @keyframes page-two-name {
+    0% {
+      transform: rotate(-20.30deg) translateY(-90px);
+  }
+  100% {
+      transform: rotate(4.30deg) translateY(-90px);
+  }
   }
   &__bottom {
     display: flex;
     flex-direction: column;
+    align-items: end;
     gap: 30px;
     position: relative;
     z-index: 3;
@@ -90,9 +111,11 @@ body {
 
   &__link {
     font-family: 'Times New Roman', Times, serif;
-    padding: 12px 41px;
+    padding: 12px 0;
+    text-align: center;
     font-size: 36.08px;
     font-weight: 400;
+    max-width: 321px;
     min-width: 321px;
     box-sizing: border-box;
     border: 1px solid rgb(0, 0, 0);
