@@ -37,7 +37,7 @@ body {
   }
   &__img-one {
     top: 92px;
-    left: 0;
+    left: -20px;
   } 
   &__img-two {
     top: 478px;
@@ -121,5 +121,31 @@ body {
     border: 1px solid rgb(0, 0, 0);
     border-radius: 13px;
     background: linear-gradient(0.00deg, rgb(255, 255, 255),rgb(208, 208, 208) 21.049%,rgb(255, 255, 255) 100%);
+  }
+}
+@media (max-height: 800px) {
+  .page-two {
+    &__img-one {
+      top: 60px;
+      left: -20px;
+    }
+    &__img-two {
+      top: 408px;
+      left: 30px;
+    }
+    &__img-three {
+      top: 280px;
+      left: 140px;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .page-two {
+    &__title {
+      font-size: 50px;
+    }
+    &__name {
+      font-size: 140px;
+    }
   }
 }
