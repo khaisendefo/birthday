@@ -1,15 +1,9 @@
 
+@import 'base/font.face';
 @import 'base/reset';
 @import 'base/vars';
 
 @import 'global/global';
-
-@font-face {
-  font-family: "Comic Sans MS";
-  font-style: normal;
-  font-weight: 400;
-  src: url("./fonts/Comic-Sans-MS.woff2") format("woff2"),
-}
 
 body {
   font-family: "Comic Sans MS";

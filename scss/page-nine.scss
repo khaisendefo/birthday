@@ -1,0 +1,123 @@
+@import 'base/font.face';
+@import 'base/reset';
+@import 'base/vars';
+
+@import 'global/global';
+
+.nine-wrapper {
+  & .container {
+    padding: 0;
+  }
+}
+
+.page-nine__container {
+  background: url('../images/page-nine.png') no-repeat;
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; 
+    right: 0;
+    width: 430px;
+    height: 150px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.73) 100%);
+    transform: rotate(180deg);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 430px;
+    height: 583px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.73) 100%);
+  }
+}
+.page-nine {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  &__top {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.40);
+    padding: 0 13px 0;
+  }
+  &__label {
+    color: #FFF;
+    font-family: "Signate Grotesk";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: -0.44px;
+    padding-bottom: 14px;
+  }
+  &__number {
+    color: #FFF;
+    font-family: "Signate Grotesk";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: -0.44px;
+    padding: 35px 61px 14px 13px;
+    border-left: 1px solid rgba(255, 255, 255, 0.40);
+  }
+  &__body {
+    padding: 0 21px;
+  }
+  &__title {
+    color: #FFF;
+    text-shadow: 0px 3.554px 17.769px rgba(0, 0, 0, 0.25);
+    font-family: "Signate Grotesk";
+    font-size: 35.947px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: -0.719px;
+    text-transform: uppercase;
+    margin-bottom: 23px;
+    & span {
+      color: #CEFF0A;
+      font-family: "Signate Grotesk";
+      font-weight: 900;
+    }
+  }
+  &__description {
+    color: #FFF;
+    font-family: Gilroy;
+    font-size: 17.5px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -0.36px;
+    max-width: 387px;
+    margin-bottom: 23px;
+  }
+  &__link {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 100px;
+    padding: 6px 6px 6px 14px;
+    color: #000;
+    font-family: "Signate Grotesk";
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1.4px;
+    border: solid 1px #000;
+    background-color: #fff;
+    max-width: 307px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+}
