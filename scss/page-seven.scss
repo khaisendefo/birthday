@@ -27,7 +27,7 @@
     align-items: end;
     justify-content: space-between;
     border-bottom: 1px solid rgba(255, 255, 255, 0.40);
-    padding: 0 13px 14px;
+    padding: 0 13px 0;
   }
   &__label {
     color: #FFF;
@@ -37,6 +37,7 @@
     font-weight: 900;
     line-height: normal;
     letter-spacing: -0.44px;
+    padding-bottom: 14px;
   }
   &__number {
     color: #FFF;
@@ -46,7 +47,7 @@
     font-weight: 900;
     line-height: normal;
     letter-spacing: -0.44px;
-    padding: 55px 61px 0px 13px;
+    padding: 35px 61px 14px 13px;
     border-left: 1px solid rgba(255, 255, 255, 0.40);
   }
   &__title {
