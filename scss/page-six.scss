@@ -1,0 +1,87 @@
+@import 'base/font.face';
+@import 'base/reset';
+@import 'base/vars';
+
+@import 'global/global';
+
+.birthday__container {
+  font-family: 'Signate Grotesk', sans-serif;
+  background: url('../images/birthday.png') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    right: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 47.76%);
+    width: 430px;
+    height: 459px;
+  }
+}
+
+.birthday {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 59px 0 157px;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+
+  &__title {
+    max-width: 344px;
+    color: #FFF;
+    text-shadow: 0px 4px 30.5px rgba(0, 0, 0, 0.25);
+    font-family: "Signate Grotesk";
+    font-size: 79.941px;
+    font-weight: 900;
+    letter-spacing: -1.599px;
+
+    & span {
+      color: #CEFF0A;
+    }
+  }
+
+  &__name {
+    color: #FFF;
+    text-shadow: 0px 3.504px 26.72px rgba(0, 0, 0, 0.25);        
+    font-size: 70.033px;       
+    font-weight: 900;      
+    letter-spacing: -1.401px;
+    line-height: normal;
+  }
+
+  &__description {
+    color: #FFF;
+    font-family: Gilroy;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.44px;
+    max-width: 386px;
+    line-height: normal;
+    margin-bottom: 29px;
+
+    & span {
+      color: #CEFF0A;
+      font-weight: 900;
+    }
+  }
+
+  &__link {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 100px;
+    padding: 6px 6px 6px 14px;
+    color: #000;
+    font-family: "Signate Grotesk";
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1.4px;
+    background-color: #fff;
+    max-width: 307px;
+  }
+}

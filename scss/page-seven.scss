@@ -1,0 +1,121 @@
+@import 'base/font.face';
+@import 'base/reset';
+@import 'base/vars';
+
+@import 'global/global';
+
+.seven-wrapper {
+  & .container {
+    padding: 0;
+  }
+}
+
+.page-seven__container {
+  background: url('../images/page-seven.png') no-repeat;
+  background-size: contain;
+  background-position: top center;
+}
+
+.page-seven {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-bottom: 157px;
+  &__top {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.40);
+    padding: 0 13px 14px;
+  }
+  &__label {
+    color: #FFF;
+    font-family: "Signate Grotesk";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: -0.44px;
+  }
+  &__number {
+    color: #FFF;
+    font-family: "Signate Grotesk";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: -0.44px;
+    padding: 55px 61px 0px 13px;
+    border-left: 1px solid rgba(255, 255, 255, 0.40);
+  }
+  &__title {
+    color: #FFF;
+    text-shadow: 0px 3.554px 17.769px rgba(0, 0, 0, 0.25);
+    font-family: "Signate Grotesk";
+    font-size: 35.947px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: -0.719px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    padding: 0 13px;
+
+    & span {
+      font-family: "Signate Grotesk";
+      color: #CEFF0A;
+      font-weight: 900;
+    }
+  }
+  &__card {
+    padding: 20px 11px 23px 20px;
+    border-radius: 40px 40px 0px 0px;
+    background-color: #fff;
+  }
+  &__description {
+    color: #000;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -0.36px;
+    margin-bottom: 14px;
+  }
+  &__list {
+    max-width: 389px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 26px;
+  }
+  &__item {
+    border-radius: 1000px;
+    background: #000;
+    padding: 4px 16px;
+    color: #FFFFFA;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.36px;
+  }
+  &__link {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 100px;
+    padding: 6px 6px 6px 14px;
+    color: #000;
+    font-family: "Signate Grotesk";
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1.4px;
+    border: solid 1px #000;
+    background-color: #fff;
+    max-width: 307px;
+    margin: 0 auto;
+  }
+}
