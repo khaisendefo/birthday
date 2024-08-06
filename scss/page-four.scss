@@ -11,7 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 101px 0 58px;
+  padding: 60px 0 58px;
   font-family: 'Times New Roman', Times, serif;
   &__top {
     text-align: center;
@@ -35,7 +35,7 @@ body {
     max-width: 281px;
   }
   &__img {
-    max-width: 372px;
+    max-width: 320px;
     margin: 0 auto 30px; 
     animation-delay: 0.9s;
     animation: page-four-img 0.8s linear infinite alternate;

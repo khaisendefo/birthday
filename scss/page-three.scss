@@ -6,14 +6,11 @@
 body {
   background-color: #FDE092;
 }
-f {
-  position: relative;
-}
 .page-three {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 101px 0 58px;
+  padding: 60px 0 58px;
   font-family: 'Times New Roman', Times, serif;
   &__top {
     text-align: center;
@@ -36,7 +33,7 @@ f {
     font-weight: 400;
   }
   &__img {
-    max-width: 372px;
+    max-width: 320px;
     margin: 0 auto 30px; 
     animation-delay: 0.9s;
     animation: page-three-img 0.3s linear infinite alternate;
