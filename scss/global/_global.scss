@@ -1,5 +1,6 @@
 body {
   background-color: #fff;
+  overflow: hidden;
 }
 
 .wrapper {
@@ -12,7 +13,7 @@ body {
   max-width: 430px;
   margin: 0 auto;
   padding: 0 15px;
-  height: 100dvh;
+  height: 100vh;
   min-height: -wedkit-fill-available;
   overflow-y: scroll;
   scrollbar-width: none;
