@@ -23,7 +23,7 @@
     height: 197px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.73) 100%);
     transform: rotate(180deg);
-    z-index: 2;
+    z-index: 3;
   }
 }
 
@@ -34,7 +34,7 @@
   }
   &__top {
     position: relative;
-    z-index: 2;
+    z-index: 4;
   }
   &__row {
     display: flex;
@@ -79,6 +79,13 @@
       background-color: rgba(255, 255, 255, 0.20);
       border-radius: 4px;
       cursor: pointer;
+      & .progress {
+        height: 100%;
+        background: white;
+        width: 0%;
+        border-radius: 4px;
+        transition: width 0.1s linear;
+      }
     }
   }
   &__person {
@@ -112,9 +119,11 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    & video {
-      max-width: 122%;
-      pointer-events: none;
+  }
+  &__videos {
+    display: none;
+    &.active {
+      display: block;
     }
   }
   &__title {
