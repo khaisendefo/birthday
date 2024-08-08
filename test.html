@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Истории с видео</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .progress-bar {
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            position: relative;
+            overflow: hidden;
+            margin: 2px 0;
+        }
+        .progress {
+            height: 100%;
+            background: white;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <video class="story__videos" muted>
+                    <source src="assets/video/1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="swiper-slide">
+                <video class="story__videos" muted>
+                    <source src="assets/video/2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="swiper-slide">
+                <video class="story__videos" muted>
+                    <source src="assets/video/3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <!-- Добавьте остальные слайды с видео -->
+        </div>
+        <!-- Добавим прогресс бары -->
+        <div class="progress-bars">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <!-- Добавьте остальные прогресс бары -->
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const swiper = new Swiper('.swiper-container', {
+                direction: 'horizontal',
+                loop: false,
+                on: {
+                    slideChange: function () {
+                        updateProgressBar();
+                        playCurrentVideo();
+                    }
+                }
+            });
+
+            const videos = document.querySelectorAll('.story__videos');
+            const progressBars = document.querySelectorAll('.progress-bar .progress');
+
+            function updateProgressBar() {
+                progressBars.forEach((bar, index) => {
+                    if (index < swiper.activeIndex) {
+                        bar.style.width = '100%';
+                    } else if (index === swiper.activeIndex) {
+                        bar.style.width = '0%';
+                    } else {
+                        bar.style.width = '0%';
+                    }
+                });
+            }
+
+            function playCurrentVideo() {
+                videos.forEach((video, index) => {
+                    video.pause();
+                    if (index === swiper.activeIndex) {
+                        video.play();
+                        video.addEventListener('timeupdate', () => {
+                            const progress = (video.currentTime / video.duration) * 100;
+                            progressBars[index].style.width = `${progress}%`;
+                        });
+                    }
+                });
+            }
+
+            // Запустить воспроизведение первого видео
+            playCurrentVideo();
+        });
+    </script>
+</body>
+</html>
